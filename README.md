@@ -48,7 +48,7 @@ Ubuntu 20.04 LTS (or equivalent).
 ## 👥 Authors <a id="-authors"></a>
 This project was collaboratively developed by Holberton students as a peer programming exercise.\
 \
-**Esteban LEVY** https://github.com/ST-GuY\
+**Esteban LEVY** https://github.com/ST-GuY \
 **Thomas SORLI** https://github.com/Pendarium \
 **Cécile LAROCHE** https://github.com/CecileLAROCHE
 
