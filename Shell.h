@@ -8,7 +8,8 @@
 #include <stdlib.h>
 
 
-
-
+/*prototypes utilisés*/
+char *read_line(void);
+int process_command(char *line, char *argv[], int cmd_count, int *exit_status);
 
 #endif
