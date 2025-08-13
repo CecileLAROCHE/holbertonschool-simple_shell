@@ -6,33 +6,44 @@
  * This program continuously prompts the user for input, reads a line
  * from standard input, and prints the command entered by the user until
  * EOF (Ctrl+D) is encountered.
+ * @argc: Argument count
+ * @argv: Argument value
  * Return: Always 0 (Success)
  */
 
-int main(void)
+int main(__attribute__((unused)) int argc, char **argv)
 {
 	char *line = NULL;
-	size_t len = 0;
-	ssize_t nread;
+	int exit_status = 0;
+	int should_exit;
 
+	/* Boucle principale, gère l’affichage du prompt et la lecture ligne */
 	while (1)
 	{
-
 		if (isatty(STDIN_FILENO))
-			printf("$ ");
+		{
+			printf("My simple_shell> ");
+			fflush(stdout);
+		}
 
-		nread = getline(&line, &len, stdin);
-
-		if (nread == -1)
+		/*La gestion de Ctrl+D (EOF) avec un break.*/
+		line = read_line();
+		if (line == NULL)
 		{
 			if (isatty(STDIN_FILENO))
-				printf("\n");
+				printf("Bye bye\n");
 			break;
 		}
 
-		line[strcspn(line, "\n")] = '\0';
+		/*Un appel à process_command() pour traiter la commande.*/
+		should_exit = process_command(line, argv, &exit_status);
+
 
 		printf("Commande : %s\n", line);
+
+		/*La libération de la mémoire de line à chaque tour de boucle.*/
+		free(line);
+
 
 		if (should_exit)
 		{
@@ -41,3 +52,4 @@ int main(void)
 	}
 	return (exit_status);
 }
+
