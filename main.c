@@ -33,8 +33,11 @@ int main(void)
 		line[strcspn(line, "\n")] = '\0';
 
 		printf("Commande : %s\n", line);
-	}
 
-	free(line);
-	return (0);
+		if (should_exit)
+		{
+			return (exit_status);
+		}
+	}
+	return (exit_status);
 }
