@@ -17,6 +17,7 @@ int main(__attribute__((unused)) int argc, char **argv)
 	int exit_status = 0;
 	int should_exit;
 
+	/* Boucle principale, gère l’affichage du prompt et la lecture ligne */
 	while (1)
 	{
 		if (isatty(STDIN_FILENO))
@@ -25,16 +26,19 @@ int main(__attribute__((unused)) int argc, char **argv)
 			fflush(stdout);
 		}
 
+		/*La gestion de Ctrl+D (EOF) avec un break.*/
 		line = read_line();
 		if (line == NULL)
 		{
 			if (isatty(STDIN_FILENO))
-				printf("Break\n");
+				printf("Bye bye\n");
 			break;
 		}
 
+		/*Un appel à process_command() pour traiter la commande.*/
 		should_exit = process_command(line, argv, &exit_status);
 
+		/*La libération de la mémoire de line à chaque tour de boucle.*/
 		free(line);
 
 		if (should_exit)
