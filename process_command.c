@@ -11,5 +11,5 @@
  */
 int process_command(char *line, char *argv[], int cmd_count, int *exit_status)
 {
-	blabla
+	lala
 }
