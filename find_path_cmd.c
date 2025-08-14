@@ -1,7 +1,5 @@
 #include "Shell.h"
 
-extern char **environ;
-
 /**
 * _getenv - gets an environnement variable
 * @name: the variable to be found

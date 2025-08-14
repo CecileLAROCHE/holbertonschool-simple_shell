@@ -7,9 +7,12 @@
 #include <string.h>
 #include <stdlib.h>
 
+/* Variables d'environnement */
+extern char **environ;
 
 /*prototypes utilisés*/
 char *read_line(void);
 int process_command(char *line, char *argv[], int *exit_status);
+int _strcmp(const char *s1, const char *s2);
 
 #endif
