@@ -32,5 +32,5 @@ int process_command(char *line, char *argv[], int cmd_count, int *exit_status)
 	{
 		return (1);
 	}
-	
 }
+

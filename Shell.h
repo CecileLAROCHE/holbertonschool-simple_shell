@@ -11,8 +11,9 @@
 extern char **environ;
 
 /*prototypes utilisés*/
+int main(__attribute__((unused)) int argc, char **argv);
 char *read_line(void);
 int process_command(char *line, char *argv[], int *exit_status);
-int _strcmp(const char *s1, const char *s2);
+char *_getenv(const char *name);
 
 #endif
