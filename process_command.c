@@ -20,5 +20,17 @@ int process_command(char *line, char *argv[], int cmd_count, int *exit_status)
 		args[index++] = token;
 		token = strtok(NULL, "\t\r\n");
 	}
-	args[index] == NULL;
+
+	args[index] = NULL;
+
+	if (args[0] == NULL)
+	{
+		return (0);
+	}
+
+	if (strcmp(args[0], "exit") == 0)
+	{
+		return (1);
+	}
+	
 }
