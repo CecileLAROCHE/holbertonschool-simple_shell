@@ -38,7 +38,7 @@ Ubuntu 20.04 LTS (or equivalent).
 
 ## 🗺️ Flowchart
 
-![Flowchart](Picture/C%20-%20Simple Shell.drawio.png)
+![Flowchart](Picture/Flowchart.png)
 
 ## 🧪 Tests and output
 
@@ -46,13 +46,13 @@ Ubuntu 20.04 LTS (or equivalent).
 
 ## 📁 Project Structure
 
-├── main.c
-├──
-├──
-├──
-├──
-├──
-├──
+├── main.c\
+├────\
+├──\
+├──\
+├──\
+├──\
+├── man_1_simple_shell\
 └── README.md
 
 ## 👥 Authors
