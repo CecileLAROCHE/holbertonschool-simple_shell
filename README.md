@@ -8,13 +8,13 @@
 
 ## 🧭 Index
 
-1 - [⚙️ Cloning and Compilation](#cloning-and-compilation)
-2 - [📚 Files in Repository](#-files-in-repository)
-3 - [📄 Man Page](#-man-page)
-4 - [🗺️ Flowchart](#flowchart)
-5 - [🧪 Tests and outputs](#-tests-and-output)
-6 - [📁 Project Structure](#-project-structure)
-7 - [👥 Authors](#-authors)
+1 - [⚙️ Cloning and Compilation](#cloning-and-compilation)\
+2 - [📚 Files in Repository](#-files-in-repository)\
+3 - [📄 Man Page](#-man-page)\
+4 - [🗺️ Flowchart](#flowchart)\
+5 - [🧪 Tests and outputs](#-tests-and-output)\
+6 - [📁 Project Structure](#-project-structure)\
+7 - [👥 Authors](#-authors)\
 8 - [📜 License](#-license)
 
 ## ⚙️ Cloning and Compilation
@@ -57,8 +57,8 @@ Ubuntu 20.04 LTS (or equivalent).
 
 This project was collaboratively developed by Holberton students as a peer programming exercise.\
 \
-**Esteban LEVY** [GitHub](https://github.com/ST-GuY)
-**Thomas SORLI** [GitHub](https://github.com/Pendarium)
+**Esteban LEVY** [GitHub](https://github.com/ST-GuY)\
+**Thomas SORLI** [GitHub](https://github.com/Pendarium)\
 **Cécile LAROCHE** [GitHub](https://github.com/CecileLAROCHE)
 
 ## 📜 License
