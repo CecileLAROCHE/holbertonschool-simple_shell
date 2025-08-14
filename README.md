@@ -29,7 +29,7 @@ Ubuntu 20.04 LTS (or equivalent).
 | Task |Command|
 |--------------------------------------------|-------------------------------------------------------|
 | `Cloning` | `git clone https://github.com/CecileLAROCHE/holbertonschool-simple_shell.git` |
-| `Compile with` | `gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c` |
+| `Compile with` | `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh` |
 | `To run:` | `________` |
 
 ## 📚 Files in Repository
