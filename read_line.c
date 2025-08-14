@@ -24,7 +24,6 @@ char *read_line(void)
 	{
 		free(line);
 		return (NULL);
-
 	}
 /*Suppression du \n final*/
 	for (i = 0; line[i] != '\0'; i++)
