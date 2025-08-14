@@ -1,6 +1,6 @@
 # README of the project Simple Shell
 
-![Project Status](https://img.shields.io/badge/status-development-yellow) ![License: Edu](https://img.shields.io/badge/license-Educational-lightgrey)
+![Project Status](https://img.shields.io/badge/status-development-yellow)  ![License: Edu](https://img.shields.io/badge/license-Educational-lightgrey)  ![buil with](https://img.shields.io/badge/built_with-❤️‍🔥-df0000)
 
 <p align="center"><img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3hud3Y3dG5sMXI3MHNwZ3dwem5sc3Jsa3lmdmZpYm9wbHd4NWN4ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qPa9vUYCUrx6w/giphy.gif" alt="café" width="400"><!-- markdownlint-disable-line MD033 --></p>
 
