@@ -38,6 +38,8 @@ Ubuntu 20.04 LTS (or equivalent).
 
 ## 🗺️ Flowchart
 
+![Flowchart](Picture/C%20-%20Simple Shell.drawio.png)
+
 ## 🧪 Tests and output
 
 ### 💻 Outputs
