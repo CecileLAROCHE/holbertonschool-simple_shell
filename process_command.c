@@ -11,5 +11,26 @@
  */
 int process_command(char *line, char *argv[], int cmd_count, int *exit_status)
 {
-	blabla
+	char *args[64];
+	int index = 0;
+	char *token = strtok(line, "\t\r\n");
+
+	while (token != NULL && index < 63)
+	{
+		args[index++] = token;
+		token = strtok(NULL, "\t\r\n");
+	}
+
+	args[index] = NULL;
+
+	if (args[0] == NULL)
+	{
+		return (0);
+	}
+
+	if (strcmp(args[0], "exit") == 0)
+	{
+		return (1);
+	}
 }
+
