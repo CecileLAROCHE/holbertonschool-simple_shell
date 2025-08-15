@@ -17,3 +17,4 @@ int process_command(char *line, char *argv[], int cmd_count, int *exit_status);
 char *_getenv(const char *name);
 
 #endif
+
