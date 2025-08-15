@@ -36,8 +36,7 @@ int main(__attribute__((unused)) int argc, char **argv)
 		}
 
 		/*Un appel à process_command() pour traiter la commande.*/
-		should_exit = process_command(line, argv, &exit_status);
-
+		should_exit = process_command(line, argv, cmd_count, &exit_status);
 
 		printf("Commande : %s\n", line);
 
