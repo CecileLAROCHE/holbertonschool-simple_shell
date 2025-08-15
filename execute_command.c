@@ -6,6 +6,7 @@
  * @shell_n: Shell name
  * @exit_stat: Exit status pointer
  */
+
 void execute_command(char *cmd_path, char **args, const char *shell_n,
 	int *exit_stat)
 {
