@@ -1,8 +1,7 @@
 #include "Shell.h"
 
 
-
-cmd_path
+find_in_path(cmd_path)
 {
-    
+	strtok(PATH, ":");
 }
