@@ -12,7 +12,8 @@
  * Le processus parent attend la fin du fils et récupère son statut.
  */
 
-void execute_command(char *cmd_path, char **args, const char *shell_n, int *exit_stat)
+void execute_command(char *cmd_path, char **args,
+const char *shell_n, int *exit_stat)
 {
 	pid_t pid;
 	int status;

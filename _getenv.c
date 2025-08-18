@@ -7,7 +7,8 @@
  * Parcourt la liste des variables d'environnement pour trouver
  * celle correspondant à @name et retourne sa valeur (après le '=').
  *
- * Return: Une chaîne allouée dynamiquement contenant la valeur de la variable,
+ * Return: Une chaîne allouée dynamiquement
+ * contenant la valeur de la variable,
  *         ou NULL si la variable n'existe pas.
  */
 
