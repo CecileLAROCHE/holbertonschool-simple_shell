@@ -12,9 +12,11 @@ char *_getenv(const char *name)
 	size_t len = strlen(name);
 
 	while (environ[i] != NULL)
-	{/*If name = the name of the variable in environ[i] until sign "="*/
+	{
+		/*If name = the name of the variable in environ[i] until sign "="*/
 		if (strncmp(environ[i], name, len) == 0 && environ[i][len] == '=')
-		{/*Return the path after the sign "="*/
+		{
+			/*Return the path after the sign "="*/
 			return (strdup(&environ[i][len + 1]));
 		}
 		i++;

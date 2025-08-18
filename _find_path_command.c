@@ -24,11 +24,9 @@ char *find_in_path(const char *command)
 		if (access(command, X_OK) == 0)
 			return (strdup(command));
 		else
-			return (NULL);
-	}
+			return (NULL); }
 /*Récupérer la variable PATH*/
 	path_copy = strdup(path);
-
 	/*verifie l'existance de la vatiable path_copy*/
 	if (path_copy == NULL)
 		return (NULL);
@@ -48,7 +46,7 @@ char *find_in_path(const char *command)
 		dir = strtok(NULL, ":");
 	}
 	/*Libération mémoire*/
-	/*free(path_copy);*/
+	free(path_copy);
 	/*Si aucune correspondance, retourner NULL*/
 	return (NULL);
 }

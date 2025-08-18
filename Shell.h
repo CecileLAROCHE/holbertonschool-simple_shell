@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <errno.h>
 
 /* Variables d'environnement */
 extern char **environ;

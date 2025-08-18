@@ -42,7 +42,6 @@ int process_command(char *line, char *argv[], int cmd_count, int *exit_status)
 	if (cmd_path != NULL)
 	{
 		execute_command(cmd_path, args, argv[0], exit_status);
-		free(cmd_path);
 	}
 	else
 	{
