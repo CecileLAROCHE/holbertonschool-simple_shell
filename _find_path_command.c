@@ -48,7 +48,7 @@ char *find_in_path(const char *command)
 		dir = strtok(NULL, ":");
 	}
 	/*Libération mémoire*/
-	free(path_copy);
+	/*free(path_copy);*/
 	/*Si aucune correspondance, retourner NULL*/
 	return (NULL);
 }
