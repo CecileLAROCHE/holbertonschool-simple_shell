@@ -19,6 +19,15 @@ char *find_in_path(const char *command)
 	if (path == NULL)
 		return (NULL);
 
+/* Si command contient déjà un /, on considère que c'est un chemin complet*/
+	if (strchr(command, '/'))
+	{
+		if (access(command, X_OK) == 0)
+			return (strdup(command));
+		else
+			return (NULL);
+	}
+
 /*Récupérer la variable PATH*/
 	path_copy = strdup(path);
 
