@@ -18,7 +18,6 @@ char *find_in_path(const char *command)
 	/*verifie l'existance du chemin*/
 	if (path == NULL)
 		return (NULL);
-
 /* Si command contient déjà un /, on considère que c'est un chemin complet*/
 	if (strchr(command, '/'))
 	{
@@ -27,14 +26,12 @@ char *find_in_path(const char *command)
 		else
 			return (NULL);
 	}
-
 /*Récupérer la variable PATH*/
 	path_copy = strdup(path);
 
 	/*verifie l'existance de la vatiable path_copy*/
 	if (path_copy == NULL)
 		return (NULL);
-
 /*Découper PATH en dossiers*/
 	dir = strtok(path_copy, ":");
 /*Construire le chemin complet pour chaque dossier*/
