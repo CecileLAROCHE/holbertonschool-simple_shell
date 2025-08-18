@@ -9,8 +9,10 @@ char *_getenv(const char *name)
 
 	while (environ[i] != NULL)
 	{
+
 		if (strncmp(environ[i], name, len) == 0 && environ[i][len] == '=')
 		{
+
 			return (strdup(&environ[i][len + 1]));
 		}
 		i++;

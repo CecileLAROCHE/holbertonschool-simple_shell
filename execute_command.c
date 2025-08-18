@@ -31,4 +31,5 @@ void execute_command(char *cmd_path, char **args, const char *shell_n, int *exit
 		else
 			*exit_stat = 1;
 	}
+	free(cmd_path);
 }
