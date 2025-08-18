@@ -28,10 +28,6 @@ char *find_in_path(const char *command)
 
 /*Découper PATH en dossiers*/
 	dir = strtok(path_copy, ":");
-
-	if (dir == NULL)
-		return (NULL);
-
 /*Construire le chemin complet pour chaque dossier*/
 	while (dir != NULL)
 	{
