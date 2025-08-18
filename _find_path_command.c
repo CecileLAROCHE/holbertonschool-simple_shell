@@ -10,6 +10,8 @@ char *find_in_path(const char *command)
 		return (NULL);
 
 	path_copy = strdup(path);
+	free(path);  /* Libération ici, car _getenv fait strdup */
+
 	if (path_copy == NULL)
 		return (NULL);
 
@@ -20,12 +22,12 @@ char *find_in_path(const char *command)
 		if (access(full_path, X_OK) == 0)
 		{
 			result = strdup(full_path);
-			free(path);
+			free(path_copy);
 			return (result);
 		}
 		dir = strtok(NULL, ":");
 	}
 
-	free(path);
+	free(path_copy);
 	return (NULL);
 }

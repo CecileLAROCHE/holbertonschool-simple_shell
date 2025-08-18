@@ -17,5 +17,6 @@ char *_getenv(const char *name)
 		}
 		i++;
 	}
+	free(strdup(&environ[i][len + 1]));
 	return (NULL);
 }
