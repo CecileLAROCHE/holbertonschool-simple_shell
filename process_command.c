@@ -46,7 +46,7 @@ int process_command(char *line, char *argv[], int cmd_count, int *exit_status)
 	}
 	else
 	{
-		printf("%s: command not found\n", args[0]);
+		printf("%s: %d: %s: command not found\n", argv[0], cmd_count, args[0]);
 	}
 	return (0);
 }
