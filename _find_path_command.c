@@ -9,7 +9,7 @@
 
 char *find_in_path(const char *command)
 {
-	char *path = getenv("PATH");
+	char *path = _getenv("PATH");
 	char *path_copy;
 	char *dir;
 	char full_path[1024];
