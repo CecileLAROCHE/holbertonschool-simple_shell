@@ -1,24 +1,15 @@
 #include "Shell.h"
 
-/**
- * main - Runs a simple shell that reads and prints user input
- *
- * This program continuously prompts the user for input, reads a line
- * from standard input, and prints the command entered by the user until
- * EOF (Ctrl+D) is encountered.
- * @argc: Argument count
- * @argv: Argument value
- * Return: Always 0 (Success)
- */
+int process_command(char *line, char *argv[], int cmd_count, int *exit_status);
+char *read_line(void);
 
-int main(__attribute__((unused)) int argc, char **argv)
+int main(int argc __attribute__((unused)), char *argv[])
 {
 	char *line = NULL;
 	int exit_status = 0;
 	int should_exit;
 	int cmd_count = 0;
 
-	/* Boucle principale, gère l’affichage du prompt et la lecture ligne */
 	while (1)
 	{
 		if (isatty(STDIN_FILENO))
@@ -27,7 +18,6 @@ int main(__attribute__((unused)) int argc, char **argv)
 			fflush(stdout);
 		}
 
-		/*La gestion de Ctrl+D (EOF) avec un break.*/
 		line = read_line();
 		if (line == NULL)
 		{
@@ -36,20 +26,14 @@ int main(__attribute__((unused)) int argc, char **argv)
 			break;
 		}
 
-		/* On incrémente avant d'appeler process_command */
 		cmd_count++;
 
-		/*Un appel à process_command() pour traiter la commande.*/
 		should_exit = process_command(line, argv, cmd_count, &exit_status);
 
-		/*La libération de la mémoire de line à chaque tour de boucle.*/
 		free(line);
 
 		if (should_exit)
-		{
 			return (exit_status);
-		}
 	}
 	return (exit_status);
 }
-
