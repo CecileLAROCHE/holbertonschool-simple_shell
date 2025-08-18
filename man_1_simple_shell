@@ -1,0 +1,42 @@
+.TH Simple_Shell "11/08/2025 -> 22/08/2025" "version 1.0"
+
+.SH NAME
+Simple_Shell \- custom shell for small version
+
+.SH SYNOPSIS
+
+.B #include "Shell.h"
+
+.br
+
+.B Simple_Shell
+
+.SH DESCRIPTION
+The
+
+.B Simple_Shell
+Programme is small command interpreter he read from standar input with
+
+.I process_command
+We can use het on interactiv mod and uninteractiv mod
+
+.SH Built-in implemented
+
+.B Exit
+Use to exit Simple_Shell
+
+.B Env
+Use to print environment
+
+.SH RETURN VALUE
+Return the PPID and PID of the command
+Return Error
+
+.SH EXAMPLES
+pwd
+My Simple_Shell> pwd
+/root/holberton-simple_shell
+.fi
+
+.SH AUTHOR
+Written by [Laroche Cecile, Sorli Thomas and Levy Esteban]
