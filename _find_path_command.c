@@ -12,7 +12,7 @@ char *find_in_path(const char *command)
 	path_copy = strdup(path);
 	if (path_copy == NULL)
 		return (NULL);
-  
+
 	dir = strtok(path_copy, ":");
 	while (dir != NULL)
 	{
@@ -20,12 +20,12 @@ char *find_in_path(const char *command)
 		if (access(full_path, X_OK) == 0)
 		{
 			result = strdup(full_path);
-			free(path_copy);
+			free(path);
 			return (result);
 		}
 		dir = strtok(NULL, ":");
 	}
 
-	free(path_copy);
+	free(path);
 	return (NULL);
 }
