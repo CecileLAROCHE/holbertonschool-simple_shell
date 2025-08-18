@@ -16,6 +16,7 @@ int main(__attribute__((unused)) int argc, char **argv)
 	char *line = NULL;
 	int exit_status = 0;
 	int should_exit;
+	int cmd_count = 0;
 
 	/* Boucle principale, gère l’affichage du prompt et la lecture ligne */
 	while (1)
@@ -35,15 +36,16 @@ int main(__attribute__((unused)) int argc, char **argv)
 			break;
 		}
 
-		/*Un appel à process_command() pour traiter la commande.*/
-		should_exit = process_command(line, argv, &exit_status);
+		/* On incrémente avant d'appeler process_command */
+		cmd_count++;
 
+		/*Un appel à process_command() pour traiter la commande.*/
+		should_exit = process_command(line, argv, cmd_count, &exit_status);
 
 		printf("Commande : %s\n", line);
 
 		/*La libération de la mémoire de line à chaque tour de boucle.*/
 		free(line);
-
 
 		if (should_exit)
 		{
