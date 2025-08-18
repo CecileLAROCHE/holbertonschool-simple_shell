@@ -1,5 +1,19 @@
 #include "Shell.h"
 
+/**
+ * find_in_path - Cherche une commande dans la variable d'environnement PATH
+ * @command: La commande à rechercher
+ *
+ * Cette fonction récupère la variable PATH, la duplique,
+ * puis parcourt chaque dossier séparé par ':' pour chercher
+ * si la commande existe et est exécutable.
+ *
+ * Return: Un pointeur vers le chemin complet de la commande s'il est trouvé,
+ *         sinon NULL.
+ *
+ * Description des flags :
+ * - X_OK : vérifie si le fichier est exécutable.
+ */
 
 char *find_in_path(const char *command)
 {

@@ -1,5 +1,16 @@
 #include "Shell.h"
 
+/**
+ * execute_command - Exécute une commande en créant un processus fils
+ * @cmd_path: Chemin complet vers la commande à exécuter
+ * @args: Tableau d'arguments pour la commande (doit être NULL-terminated)
+ * @shell_n: Nom du shell (pour afficher les messages d'erreur)
+ * @exit_stat: Pointeur vers la variable qui contiendra le statut de sortie
+ *
+ * Cette fonction crée un processus fils avec fork(), puis
+ * dans le fils, elle exécute la commande avec execve().
+ * Le processus parent attend la fin du fils et récupère son statut.
+ */
 
 void execute_command(char *cmd_path, char **args, const char *shell_n, int *exit_stat)
 {
