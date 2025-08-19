@@ -42,8 +42,17 @@ Ubuntu 20.04 LTS (or equivalent).
 
 ## 🧪 Tests and 
 
-# test terminal
+#### test terminal :
 ![screenshot](Picture/terminal.png)
+
+#### test interactiv mod :
+![screenshot](Picture/ls -l.png)
+![screenshot](Picture/ls.png)
+![screenshot](Picture/cat print_env.png)
+
+#### test uninteractiv mod :
+![screenshot](Picture/uninteractive mod echo.png)
+![screenshot](Picture/uninteractive mod error.png)
 
 ### 💻 Outputs
 
