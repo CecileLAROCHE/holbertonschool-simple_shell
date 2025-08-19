@@ -46,13 +46,16 @@ Ubuntu 20.04 LTS (or equivalent).
 ![screenshot](Picture/terminal.png)
 
 #### test interactiv mod :
-![screenshot](Picture/ls -l.png)
+
+![screenshot](Picture/ls_-l.png)
+
 ![screenshot](Picture/ls.png)
-![screenshot](Picture/cat print_env.png)
+
+![screenshot](Picture/cat_print_env.png)
 
 #### test uninteractiv mod :
-![screenshot](Picture/uninteractive mod echo.png)
-![screenshot](Picture/uninteractive mod error.png)
+![screenshot](Picture/uninteractive_mod_echo.png)
+![screenshot](Picture/uninteractive_mod_error.png)
 
 ### 💻 Outputs
 
