@@ -41,7 +41,7 @@ Ubuntu 20.04 LTS (or equivalent).
 ![Flowchart](Picture/Flowchart.png)
 
 
-## 🧪 Tests and 
+## 🧪 Tests and Outputs
 
 #### test terminal :
 ![screenshot](Picture/terminal.png)
@@ -57,8 +57,6 @@ Ubuntu 20.04 LTS (or equivalent).
 #### test uninteractiv mod :
 ![screenshot](Picture/uninteractive_mod_echo.png)
 ![screenshot](Picture/uninteractive_mod_error.png)
-
-### 💻 Outputs
 
 ## 📁 Project Structure
 
