@@ -52,7 +52,7 @@ int process_command(char *line, char *argv[], int cmd_count, int *exit_status)
 			cmd_path = strdup(args[0]);
 		else
 		{
-			printf("%s: %d: %s: not found\n", argv[0], cmd_count, args[0]);
+			fprintf(stderr,"%s: %d: %s: not found\n", argv[0], cmd_count, args[0]);
 			*exit_status = 127;
 			return (127);
 		}
@@ -63,7 +63,7 @@ int process_command(char *line, char *argv[], int cmd_count, int *exit_status)
 		cmd_path = find_in_path(args[0]);
 		if (cmd_path == NULL)
 		{
-			printf("%s: %d: %s: not found\n", argv[0], cmd_count, args[0]);
+			fprintf(stderr,"%s: %d: %s: not found\n", argv[0], cmd_count, args[0]);
 			*exit_status = 127;
 			return (127);
 		}
