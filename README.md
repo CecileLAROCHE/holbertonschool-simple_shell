@@ -15,9 +15,7 @@
 5 - [🧪 Tests and outputs](#-tests-and-output)\
 6 - [📁 Project Structure](#-project-structure)\
 7 - [👥 Authors](#-authors)\
-8 - [📜 License](#-license)\
-
-
+8 - [📜 License](#-license)
 
 ## ⚙️ Cloning and Compilation
 
