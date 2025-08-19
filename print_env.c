@@ -11,8 +11,10 @@ void print_env(void)
 {
 	int i = 0;
 
+	/* Parcours du tableau 'environ' jusqu'à trouver un pointeur NULL */
 	while (environ[i] != NULL)
 	{
+		/* Affiche la variable d'environnement à l'index courant */
 		printf("%s\n", environ[i]);
 		i++;
 	}

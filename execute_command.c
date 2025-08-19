@@ -18,8 +18,10 @@ const char *shell_n, int *exit_stat)
 	pid_t pid;
 	int status;
 
+	/* Création d'un nouveau processus enfant */
 	pid = fork();
 
+	/* Gestion de l'erreur lors du fork */
 	if (pid < 0)
 	{
 		perror("fork");
@@ -27,20 +29,40 @@ const char *shell_n, int *exit_stat)
 		return;
 	}
 
+	/* Code exécuté uniquement dans le processus enfant */
 	if (pid == 0)
 	{
+		/*
+		 * Remplace le processus enfant par la commande spécifiée.
+		 * execve charge et exécute le binaire à cmd_path avec les arguments args
+		 * et l'environnement courant 'environ'.
+		 */
 		if (execve(cmd_path, args, environ) == -1)
 		{
+			/* Affiche un message d'erreur en cas d'échec */
 			perror(shell_n);
+
+			/*
+			 * Termine le processus enfant avec le code 127,
+			 * qui indique généralement une commande introuvable.
+			 */
 			exit(127);
 		}
 	}
 	else
 	{
+		/* Code exécuté uniquement dans le processus parent */
+
+		/*
+		 * Attend la fin du processus enfant et récupère son statut.
+		 * waitpid permet de bloquer le parent jusqu'à la fin de l'enfant.
+		 */
 		waitpid(pid, &status, 0);
+
+		/* Vérifie si l'enfant s'est terminé normalement */
 		if (WIFEXITED(status))
-			*exit_stat = WEXITSTATUS(status);
+			*exit_stat = WEXITSTATUS(status); /* Récupère son code de sortie */
 		else
-			*exit_stat = 1;
+			*exit_stat = 1; /* Si arrêt anormal, définit un code d'erreur */
 	}
 }
