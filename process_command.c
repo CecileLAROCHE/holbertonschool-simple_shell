@@ -45,10 +45,9 @@ int process_command(char *line, char *argv[], int cmd_count, int *exit_status)
 		print_env();
 		return (0);
 	}
-
-	/* Si la commande est un chemin absolu ou relatif */
-	if (args[0][0] == '/' || (args[0][0] == '.' && args[0][1] == '/'))
-	{
+	/* Si la commande contient un '/' quelque part, c’est un chemin (absolu ou relatif) */
+	if (strchr(args[0], '/'))
+		{
 		if (access(args[0], X_OK) == 0)
 			cmd_path = strdup(args[0]);
 		else
