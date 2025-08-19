@@ -40,13 +40,20 @@ Ubuntu 20.04 LTS (or equivalent).
 
 ![Flowchart](Picture/Flowchart.png)
 
-## 🧪 Tests and output
+
+## 🧪 Tests and 
+
 #### test terminal :
 ![screenshot](Picture/terminal.png)
-#### test interactiv mod : 
+
+#### test interactiv mod :
+
 ![screenshot](Picture/ls_-l.png)
+
 ![screenshot](Picture/ls.png)
+
 ![screenshot](Picture/cat_print_env.png)
+
 #### test uninteractiv mod :
 ![screenshot](Picture/uninteractive_mod_echo.png)
 ![screenshot](Picture/uninteractive_mod_error.png)

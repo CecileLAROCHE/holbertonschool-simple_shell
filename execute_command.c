@@ -32,6 +32,13 @@ const char *shell_n, int *exit_stat)
 	/* Code exécuté uniquement dans le processus enfant */
 	if (pid == 0)
 	{
+		/* Si la commande est introuvable */
+  		  if (cmd_path == NULL)
+  		  {
+  		      fprintf(stderr, "%s: not found\n", args[0]);
+		        exit(127);
+  		  }
+
 		/*
 		 * Remplace le processus enfant par la commande spécifiée.
 		 * execve charge et exécute le binaire à cmd_path avec les arguments args
