@@ -17,16 +17,18 @@ char *_getenv(const char *name)
 	int i = 0;
 	size_t len = strlen(name);
 
+	/* Parcours de toutes les variables d'environnement */
 	while (environ[i] != NULL)
 	{
-
+		/* Compare le début de la chaîne avec le nom recherché suivi de '=' */
 		if (strncmp(environ[i], name, len) == 0 && environ[i][len] == '=')
 		{
-
+			/* Duplique et retourne la valeur après le '=' */
 			return (strdup(&environ[i][len + 1]));
 		}
 		i++;
 	}
-	free(strdup(&environ[i][len + 1]));
+
+	/* Si la variable n'est pas trouvée, retourne NULL */
 	return (NULL);
 }
