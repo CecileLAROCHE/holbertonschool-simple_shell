@@ -43,7 +43,7 @@ Ubuntu 20.04 LTS (or equivalent).
 ## 🧪 Tests and 
 
 # test terminal
-! [screenshot](picture/terminal.png)
+![screenshot](Picture/terminal.png)
 
 ### 💻 Outputs
 
