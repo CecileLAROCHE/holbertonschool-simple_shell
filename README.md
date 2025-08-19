@@ -8,14 +8,16 @@
 
 ## 🧭 Index
 
-1 - [⚙️ Cloning and Compilation](#️-cloning-and-compilation)
-2 - [📚 Files in Repository](#-files-in-repository)
-3 - [📄 Man Page](#-man-page)
-4 - [🗺️ Flowchart](#-flowchart)
-5 - [🧪 Tests and outputs](#-tests-and-output)
-6 - [📁 Project Structure](#-project-structure)
-7 - [👥 Authors](#-authors)
-8 - [📜 License](#-license)
+1 - [⚙️ Cloning and Compilation](#️-cloning-and-compilation)\
+2 - [📚 Files in Repository](#-files-in-repository)\
+3 - [📄 Man Page](#-man-page)\
+4 - [🗺️ Flowchart](#%EF%B8%8F-flowchart)\
+5 - [🧪 Tests and outputs](#-tests-and-output)\
+6 - [📁 Project Structure](#-project-structure)\
+7 - [👥 Authors](#-authors)\
+8 - [📜 License](#-license)\
+
+
 
 ## ⚙️ Cloning and Compilation
 
