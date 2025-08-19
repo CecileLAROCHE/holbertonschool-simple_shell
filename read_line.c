@@ -1,13 +1,15 @@
 #include "Shell.h"
 
 /**
- * read_line - Reads a line from standard input
+ * read_line - Lit une ligne complète depuis l'entrée standard.
  *
- * This function reads a line from standard input, dynamically allocating
- * memory for the line. It removes the newline character at the end if present.
- * Returns NULL on EOF or error.
+ * Cette fonction alloue dynamiquement une mémoire pour lire une ligne
+ * de texte depuis l'entrée standard (stdin) jusqu'à ce qu'un caractère
+ * de nouvelle ligne soit rencontré ou que l'entrée soit terminée (EOF).
+ * La mémoire retournée doit être libérée par l'appelant.
  *
- * Return: Pointer to the line read, or NULL on EOF/error
+ * Return: Un pointeur vers la ligne lue (incluant le '\n' si présent),
+ *         ou NULL en cas d'erreur ou si EOF est atteint sans lecture.
  */
 
 char *read_line(void)
@@ -23,13 +25,13 @@ char *read_line(void)
 	read = getline(&line, &len, stdin);
 	/* Lecture d'une ligne depuis l'entrée standard (stdin) */
 
-/*Gérer la fin de saisie (EOF / Ctrl+D)*/
+	/*Gérer la fin de saisie (EOF / Ctrl+D)*/
 	if (read == -1) /* Si la lecture échoue (EOF ou erreur) */
 	{
 		free(line); /* Libération de la mémoire allouée à line */
 		return (NULL); /* Retour de NULL pour signaler l'erreur */
 	}
-/*Suppression du \n final*/
+	/*Suppression du \n final*/
 	for (i = 0; line[i] != '\0'; i++)
 	/* Parcours de la ligne jusqu'au caractère nul */
 	{
@@ -41,7 +43,7 @@ char *read_line(void)
 			/* Sortie de la boucle après modification */
 		}
 	}
-/*Retour de la ligne lue*/
+	/*Retour de la ligne lue*/
 	return (line);
 	/* Retour du pointeur vers la ligne modifiée */
 }
