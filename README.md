@@ -2,9 +2,29 @@
 
 ![Project Status](https://img.shields.io/badge/status-development-yellow)  ![License: Edu](https://img.shields.io/badge/license-Educational-lightgrey)  ![buil with](https://img.shields.io/badge/built_with-❤️‍🔥-df0000)
 
-<p align="center"><img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3hud3Y3dG5sMXI3MHNwZ3dwem5sc3Jsa3lmdmZpYm9wbHd4NWN4ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qPa9vUYCUrx6w/giphy.gif" alt="café" width="400"><!-- markdownlint-disable-line MD033 --></p>
+<p align="center"><img src="https://i.makeagif.com/media/10-15-2019/mpvsbP.gif" alt="Ghost in the Shell (1995)" width="400"><!-- markdownlint-disable-line MD033 --></p>
 
 ## 📖 Description
+
+Simple Shell is a C implementation of a basic command interpreter, inspired by the Unix shell.
+The project aims to teach and practice:
+* the inner workings of a command interpreter,
+* process creation and management (`fork`, `execve`, `wait`, etc.),
+* the use of environment variables and the `$PATH`,
+* input/output and stream management,
+* UNIX return code conventions.
+
+
+The program allows you to:
+
+* Display a prompt and wait for a user command.
+* Execute programs located in the current directory or in the `$PATH`.
+* Manage simple commands with arguments.
+* Provide a compliant exit code.
+
+This project was developed as part of the Holberton School peer programming curriculum, to deepen your understanding of systems programming and collaboration on a low-level project.
+
+
 
 ## 🧭 Index
 
@@ -19,20 +39,42 @@
 
 ## ⚙️ Cloning and Compilation
 
-### Prerequisites
+### ✅ Prerequisites
 
-GCC installed on your system.\
-Ubuntu 20.04 LTS (or equivalent).
+**GCC** installed on your system.\
+**Ubuntu 20.04 LTS** (or equivalent).
 
-### Clone and execution
+### 📥 Clone and execution
 
 | Task |Command|
 |--------------------------------------------|-------------------------------------------------------|
-| `Cloning` | `git clone https://github.com/CecileLAROCHE/holbertonschool-simple_shell.git` |
-| `Compile with` | `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh` |
-| `To run:` | `________` |
+| `Clone repo` | `git clone https://github.com/CecileLAROCHE/holbertonschool-simple_shell.git` |
+| `Compile` | `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh` |
+| `Run shell:` | `./hsh` |
 
 ## 📚 Files in Repository
+
+### 🖥️ Source Code Files
+
+| File                   | Description                                                                                         |
+| ---------------------- | --------------------------------------------------------------------------------------------------- |
+| `shell.h`              | Header file containing function prototypes, macros, and struct definitions used across the project. |
+| `main.c`               | Entry point of the shell, initializes the program and starts the main loop.                         |
+| `read_line.c`          | Handles user input by reading a line from standard input.                                           |
+| `process_command.c`    | Parses the input line into tokens and prepares the command for execution.                           |
+| `print_env.c`          | Prints the current environment variables.                                                           |
+| `execute_command.c`    | Handles the execution of built-in and external commands.                                            |
+| `_getenv.c`            | Custom implementation of `getenv`, retrieves environment variables.                                 |
+| `_find_path_command.c` | Finds the absolute path of a command by searching in the `PATH` environment variable.               |
+
+### 📑 Documentation Files
+
+| File                 | Description                                                       |
+| -------------------- | ----------------------------------------------------------------- |
+| `man_1_simple_shell` | Manual page describing usage, options, and behavior of the shell. |
+| `README.md`          | Main project documentation (this file).                           |
+| `AUTHORS`            | List of project contributors.                                     |
+
 
 ## 📋 Man page
 
@@ -60,14 +102,19 @@ Ubuntu 20.04 LTS (or equivalent).
 
 ## 📁 Project Structure
 
-├── main.c\
-├────\
-├──\
-├──\
-├──\
-├──\
-├── man_1_simple_shell\
-└── README.md
+## 📁 Project Structure
+
+├── AUTHORS                 # List of contributors\
+├── README.md               # Main project documentation\
+├── man_1_simple_shell      # Manual page for the shell\
+├── shell.h                 # Header file with prototypes and macros\
+├── main.c                  # Entry point, initializes the shell\
+├── read_line.c             # Reads user input from stdin\
+├── process_command.c       # Parses and tokenizes the command line\
+├── print_env.c             # Prints environment variables\
+├── execute_command.c       # Executes built-in and external commands\
+├── _getenv.c               # Custom getenv implementation\
+└── _find_path_command.c    # Locates command in PATH directories\
 
 ## 👥 Authors
 
