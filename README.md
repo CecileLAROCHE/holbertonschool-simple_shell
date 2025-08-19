@@ -40,7 +40,10 @@ Ubuntu 20.04 LTS (or equivalent).
 
 ![Flowchart](Picture/Flowchart.png)
 
-## 🧪 Tests and output
+## 🧪 Tests and 
+
+# test terminal
+! [screenshot](picture/terminal.png)
 
 ### 💻 Outputs
 
