@@ -24,18 +24,17 @@ The program allows you to:
 
 This project was developed as part of the Holberton School peer programming curriculum, to deepen your understanding of systems programming and collaboration on a low-level project.
 
-
-
 ## 🧭 Index
 
 1 - [⚙️ Cloning and Compilation](#️-cloning-and-compilation)\
-2 - [📚 Files in Repository](#-files-in-repository)\
-3 - [📄 Man Page](#-man-page)\
-4 - [🗺️ Flowchart](#%EF%B8%8F-flowchart)\
-5 - [🧪 Tests and outputs](#-tests-and-output)\
-6 - [📁 Project Structure](#-project-structure)\
-7 - [👥 Authors](#-authors)\
-8 - [📜 License](#-license)
+2 - \
+3 - [📚 Files in Repository](#-files-in-repository)\
+4 - [📄 Man Page](#-man-page)\
+5 - [🗺️ Flowchart](#%EF%B8%8F-flowchart)\
+6 - [🧪 Tests and outputs](#-tests-and-output)\
+7 - [📁 Project Structure](#-project-structure)\
+8 - [👥 Authors](#-authors)\
+9 - [📜 License](#-license)
 
 ## ⚙️ Cloning and Compilation
 
@@ -51,6 +50,23 @@ This project was developed as part of the Holberton School peer programming curr
 | `Clone repo` | `git clone https://github.com/CecileLAROCHE/holbertonschool-simple_shell.git` |
 | `Compile` | `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh` |
 | `Run shell:` | `./hsh` |
+
+## 🚀 Features / Limitations
+
+### ✅ Features
+- Displays a prompt and waits for user input.
+- Executes commands found in the current directory or in the `$PATH`.
+- Supports command arguments.
+- Handles environment variables (custom `_getenv` and `print_env`).
+- Man page available (`man ./man_1_simple_shell`).
+- Interactive **and** non-interactive modes.
+
+### ⚠️ Limitations
+- No support for advanced shell features (pipes `|`, redirections `>`, `<`, `>>`, `<<`, etc.).
+- No job control (`&`, background processes, `fg`, `bg`).
+- No shell scripting (`if`, `while`, `for`, etc.).
+- Error handling is basic compared to full-featured shells.
+- Limited set of built-in commands (only those implemented in this project).
 
 ## 📚 Files in Repository
 
