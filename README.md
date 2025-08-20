@@ -113,13 +113,19 @@ This project contains a man page in the repository files. You can directly run i
 #### 📝 Interactive mode
 <p align="center">
   <img src="Picture/ls_-l.png" alt="ls -l" width="400">
+</p>
+<p align="center">
   <img src="Picture/ls.png" alt="ls" width="400">
+  </p>
+<p align="center">
   <img src="Picture/cat_print_env.png" alt="cat print_env" width="400">
 </p>
 
 #### ⚙️ Non-interactive mode
 <p align="center">
   <img src="Picture/uninteractive_mod_echo.png" alt="echo example" width="400">
+  </p>
+<p align="center">
   <img src="Picture/uninteractive_mod_error.png" alt="error example" width="400">
 </p>
 
