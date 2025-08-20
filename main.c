@@ -22,6 +22,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 	int exit_status = 0;
 	int should_exit;
 	int cmd_count = 0;
+	int use_color = isatty(STDOUT_FILENO); /* Active couleur si sortie = terminal */
 
 	/* Boucle principale du shell */
 	while (1)
@@ -29,7 +30,10 @@ int main(int argc __attribute__((unused)), char *argv[])
 		/* Affiche l'invite si le shell est en mode interactif */
 		if (isatty(STDIN_FILENO))
 		{
-			printf("My simple_shell> ");
+			if (use_color)
+				printf("\033[1;34mMy simple_shell>\033[0m "); /* bleu gras */
+			else
+				printf("My simple_shell> ");
 			fflush(stdout);
 		}
 
