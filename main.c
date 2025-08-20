@@ -43,7 +43,9 @@ int main(int argc __attribute__((unused)), char *argv[])
 		{
 			/* Si EOF est atteint, afficher un message si en mode interactif */
 			if (isatty(STDIN_FILENO))
-				printf("\033[1;31mBye bye\033[0m\n");
+				printf("\033[1;31mBye bye 😃\033[0m\n"); /* rouge + smiley */
+			else
+				 printf("Bye bye :)\n"); /* fallback si pas terminal */
 			break;
 		}
 
