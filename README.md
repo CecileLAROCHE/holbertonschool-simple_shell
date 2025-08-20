@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="Picture/giphy.gif" alt="Ghost in the Shell (1995)" width="400">
-<!-- markdownlint-disable-line MD033 --></p>
+</p>
 
 ## 📖 Description
 
