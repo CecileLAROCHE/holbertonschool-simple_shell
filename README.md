@@ -115,9 +115,6 @@ This project contains a man page in the repository files. You can directly run i
   <img src="Picture/ls_-l.png" alt="ls -l">
 </p>
 <p align="center">
-  <img src="Picture/ls.png" alt="ls">
-  </p>
-<p align="center">
   <img src="Picture/cat_print_env.png" alt="cat print_env">
 </p>
 
@@ -139,9 +136,9 @@ This project contains a man page in the repository files. You can directly run i
 | ├── Flowchart.png | Execution flowchart |
 | ├── terminal.png | Example of interactive mode |
 | ├── ls.png | Example of `ls` command |
-| ├── ls_-l.png | Example of `ls -l` command |
+| ├── ls_-l.png | Example of `ls` and `ls -l` command |
 | ├── cat_print_env.png | Example of `cat` with printenv |
-| ├── uninteractive_mod_echo.png | Non-interactive mode example (echo) |
+| ├── uninteractive_mod_echo.png | Non-interactive mode example `ls` |
 | └── uninteractive_mod_error.png | Non-interactive mode error example |
 | **AUTHORS** | List of contributors |
 | **README.md** | Main project documentation |
