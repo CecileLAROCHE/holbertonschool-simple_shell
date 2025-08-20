@@ -43,7 +43,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 		{
 			/* Si EOF est atteint, afficher un message si en mode interactif */
 			if (isatty(STDIN_FILENO))
-				printf("Bye bye\n");
+				printf("\033[1;31mBye bye\033[0m\n");
 			break;
 		}
 
