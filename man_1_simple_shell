@@ -1,21 +1,19 @@
-.TH Simple_Shell "11/08/2025 -> 22/08/2025" "version 1.0"
+.TH Simple_Shell "11/08/2025 -> 22/08/2025" "version 1.0" "version 1.0" "Holberton School Project"
 
 .SH NAME
-Simple_Shell \- custom shell for small version
+Simple_Shell \- A simple custom shell implementation
 
 .SH SYNOPSIS
-
-.B #include "Shell.h"
-
+.B ./hsh
+.RI [command]
 .br
-
-.B Simple_Shell
+or in non-interactive mode:
+.br
+.B ./hsh
+< script.sh
 
 .SH DESCRIPTION
-The
-
-.B Simple_Shell
-Programme is small command interpreter he read from standar input with
+.B Simple_Shell is a small command interpreter he read from standar input with
 
 .I process_command
 We can use het on interactiv mod and uninteractiv mod
