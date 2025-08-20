@@ -99,25 +99,30 @@ This project contains a man page in the repository files. You can directly run i
 
 ## 🗺️ Flowchart
 
-![Flowchart](Picture/Flowchart.png)
-
+<p align="center">
+<img src="Picture/Flowchart.png" alt="Flowchart">
+</p>
 
 ## 🧪 Tests and Outputs
 
-#### test terminal :
-![screenshot](Picture/terminal.png)
+#### 💻 Terminal (interactive mode)
+<p align="center">
+  <img src="Picture/terminal.png" alt="Terminal screenshot" width="500">
+</p>
 
-#### test interactiv mod :
+#### 📝 Interactive mode
+<p align="center">
+  <img src="Picture/ls_-l.png" alt="ls -l" width="400">
+  <img src="Picture/ls.png" alt="ls" width="400">
+  <img src="Picture/cat_print_env.png" alt="cat print_env" width="400">
+</p>
 
-![screenshot](Picture/ls_-l.png)
+#### ⚙️ Non-interactive mode
+<p align="center">
+  <img src="Picture/uninteractive_mod_echo.png" alt="echo example" width="400">
+  <img src="Picture/uninteractive_mod_error.png" alt="error example" width="400">
+</p>
 
-![screenshot](Picture/ls.png)
-
-![screenshot](Picture/cat_print_env.png)
-
-#### test uninteractiv mod :
-![screenshot](Picture/uninteractive_mod_echo.png)
-![screenshot](Picture/uninteractive_mod_error.png)
 
 ## 📁 Project Structure
 
