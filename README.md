@@ -102,19 +102,28 @@ This project was developed as part of the Holberton School peer programming curr
 
 ## 📁 Project Structure
 
-## 📁 Project Structure
+| 📂 Directory / File | 📝 Description |
+|---------------------|----------------|
+| **Picture/** | Documentation assets (images for README) |
+| ├── Flowchart.png | Execution flowchart |
+| ├── terminal.png | Example of interactive mode |
+| ├── ls.png | Example of `ls` command |
+| ├── ls_-l.png | Example of `ls -l` command |
+| ├── cat_print_env.png | Example of `cat` with printenv |
+| ├── uninteractive_mod_echo.png | Non-interactive mode example (echo) |
+| └── uninteractive_mod_error.png | Non-interactive mode error example |
+| **AUTHORS** | List of contributors |
+| **README.md** | Main project documentation |
+| **man_1_simple_shell** | Manual page for the shell |
+| **shell.h** | Header file with prototypes and macros |
+| **main.c** | Entry point, initializes the shell |
+| **read_line.c** | Reads user input from stdin |
+| **process_command.c** | Parses and tokenizes the command line |
+| **print_env.c** | Prints environment variables |
+| **execute_command.c** | Executes built-in and external commands |
+| **_getenv.c** | Custom getenv implementation |
+| **_find_path_command.c** | Locates command in PATH directories |
 
-├── AUTHORS                 # List of contributors\
-├── README.md               # Main project documentation\
-├── man_1_simple_shell      # Manual page for the shell\
-├── shell.h                 # Header file with prototypes and macros\
-├── main.c                  # Entry point, initializes the shell\
-├── read_line.c             # Reads user input from stdin\
-├── process_command.c       # Parses and tokenizes the command line\
-├── print_env.c             # Prints environment variables\
-├── execute_command.c       # Executes built-in and external commands\
-├── _getenv.c               # Custom getenv implementation\
-└── _find_path_command.c    # Locates command in PATH directories\
 
 ## 👥 Authors
 
