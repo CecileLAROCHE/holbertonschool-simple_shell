@@ -2,7 +2,9 @@
 
 ![Project Status](https://img.shields.io/badge/status-development-yellow)  ![License: Edu](https://img.shields.io/badge/license-Educational-lightgrey)  ![buil with](https://img.shields.io/badge/built_with-❤️‍🔥-df0000)
 
-<p align="center"><img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTI2aW5xcjVocDJmZjFubzI4dzV5NjF4d3Y0eGx6eWE0ZnJ5OWh1NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fsoCk5kgOcYMM/giphy.gif" alt="Ghost in the Shell (1995)" width="400"><!-- markdownlint-disable-line MD033 --></p>
+<p align="center">
+  <img src="Picture/giphy.gif" alt="Ghost in the Shell (1995)" width="400">
+<!-- markdownlint-disable-line MD033 --></p>
 
 ## 📖 Description
 
