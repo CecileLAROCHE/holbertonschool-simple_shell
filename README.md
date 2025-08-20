@@ -27,7 +27,7 @@ This project was developed as part of the Holberton School peer programming curr
 ## 🧭 Index
 
 1 - [⚙️ Cloning and Compilation](#️-cloning-and-compilation)\
-2 - \
+2 - [🚀 Features / Limitations](#-features--limitations)\
 3 - [📚 Files in Repository](#-files-in-repository)\
 4 - [📄 Man Page](#-man-page)\
 5 - [🗺️ Flowchart](#%EF%B8%8F-flowchart)\
