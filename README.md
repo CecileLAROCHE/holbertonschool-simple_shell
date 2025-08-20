@@ -105,12 +105,12 @@ This project contains a man page in the repository files. You can directly run i
 
 ## 🧪 Tests and Outputs
 
-#### 💻 Terminal (interactive mode)
+### 💻 Terminal (interactive mode)
 <p align="center">
   <img src="Picture/terminal.png" alt="Terminal screenshot">
 </p>
 
-#### 📝 Interactive mode
+### 📝 Interactive mode
 <p align="center">
   <img src="Picture/ls_-l.png" alt="ls -l">
 </p>
@@ -121,7 +121,7 @@ This project contains a man page in the repository files. You can directly run i
   <img src="Picture/cat_print_env.png" alt="cat print_env">
 </p>
 
-#### ⚙️ Non-interactive mode
+### ⚙️ Non-interactive mode
 <p align="center">
   <img src="Picture/uninteractive_mod_echo.png" alt="echo example">
   </p>
