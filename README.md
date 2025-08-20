@@ -3,7 +3,7 @@
 ![Project Status](https://img.shields.io/badge/status-development-yellow)  ![License: Edu](https://img.shields.io/badge/license-Educational-lightgrey)  ![buil with](https://img.shields.io/badge/built_with-❤️‍🔥-df0000)
 
 <p align="center">
-  <img src="Picture/giphy.gif" alt="Ghost in the Shell (1995)" width="400">
+  <img src="Picture/giphy.gif" alt="Ghost in the Shell (1995)" width="600">
 </p>
 
 ## 📖 Description
@@ -135,6 +135,7 @@ This project contains a man page in the repository files. You can directly run i
 | 📂 Directory / File | 📝 Description |
 |---------------------|----------------|
 | **Picture/** | Documentation assets (images for README) |
+| ├── giphy.gif | gif on the top |
 | ├── Flowchart.png | Execution flowchart |
 | ├── terminal.png | Example of interactive mode |
 | ├── ls.png | Example of `ls` command |
