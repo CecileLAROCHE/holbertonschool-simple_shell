@@ -13,28 +13,54 @@ or in non-interactive mode:
 < script.sh
 
 .SH DESCRIPTION
-.B Simple_Shell is a small command interpreter he read from standar input with
+.B Simple_Shell
+is a small command-line interpreter written in C.
 
-.I process_command
-We can use het on interactiv mod and uninteractiv mod
+It is able to:
+.IP \[bu] 2
+Display a prompt and read from standard input.
+.IP \[bu] 2
+Execute commands found in the current directory or in the PATH.
+.IP \[bu] 2
+Support arguments for commands.
+.IP \[bu] 2
+Handle environment variables (custom
+.I getenv
+and
+.I env
+printing).
+.IP \[bu] 2
+Work in interactive and non-interactive modes.
 
-.SH Built-in implemented
-
-.B Exit
-Use to exit Simple_Shell
-
-.B Env
-Use to print environment
+.SH BUILT-IN COMMANDS
+.TP
+.B exit
+Exit the shell.
+.TP
+.B env
+Print the current environment.
 
 .SH RETURN VALUE
-Return the PPID and PID of the command
-Return Error
+The shell returns the exit status of the last executed command.
+In case of failure, an appropriate error code is returned.
 
 .SH EXAMPLES
-pwd
-My Simple_Shell> pwd
-/root/holberton-simple_shell
-.fi
+Example of interactive mode:
+.EX
+$ ./hsh
+My_Simple_Shell> pwd
+/root/holbertonschool-simple_shell
+My_Simple_Shell> exit
+.EE
 
-.SH AUTHOR
-Written by [Laroche Cecile, Sorli Thomas and Levy Esteban]
+Example of non-interactive mode:
+.EX
+$ echo "ls -l" | ./hsh
+total 8
+-rw-r--r-- 1 user user  1234 Aug 19 10:00 main.c
+...
+.EE
+
+.SH AUTHORS
+Written by Cécile Laroche, Thomas Sorli and Esteban Levy
+as part of the Holberton School low-level programming curriculum.
