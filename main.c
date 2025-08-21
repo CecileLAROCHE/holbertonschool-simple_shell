@@ -32,9 +32,9 @@ int main(int argc __attribute__((unused)), char *argv[])
 		{
 			if (use_color)
 			{
-				printf("\033[1;34mMy_\033[0m"); /* bleu gras */
-				printf("\033[1;00msimple\033[0m");
-				printf("\033[1;31m_shell>\033[0m ");
+				printf("\033[1;34mMy_\033[0m"); /*bleu gras*/
+				printf("\033[1;37msimple\033[0m"); /*blanc gras*/
+				printf("\033[1;31m_shell>\033[0m "); /*rouge gras*/
 			}
 			else
 				printf("My simple_shell> ");
@@ -47,7 +47,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 		{
 			/* Si EOF est atteint, afficher un message si en mode interactif */
 			if (isatty(STDIN_FILENO))
-				printf("\033[1;31mBye bye 😃\033[0m\n"); /* rouge + smiley */
+				printf("\033[1;35mBye bye 😃\033[0m\n"); /* violet + smiley */
 			else
 				 printf("Bye bye :)\n"); /* fallback si pas terminal */
 			break;
