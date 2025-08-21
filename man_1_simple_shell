@@ -13,7 +13,6 @@ Simple_Shell \- custom shell for small version
 
 .SH DESCRIPTION
 The
-
 .B Simple_Shell
 Programme is small command interpreter he read from standar input with
 
@@ -21,6 +20,8 @@ Programme is small command interpreter he read from standar input with
 We can use het on interactiv mod and uninteractiv mod
 
 .SH Built-in implemented
+
+.br
 
 .B Exit
 Use to exit Simple_Shell
