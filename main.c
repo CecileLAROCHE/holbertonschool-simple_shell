@@ -34,7 +34,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 				printf("\033[1;34mMy simple_shell>\033[0m "); /* bleu gras */
 			else
 				printf("My simple_shell> ");
-			fflush(stdout);
+			fflush(stdout); /* Permet d'afficher le prompt quoi qu'il arrive */
 		}
 
 		/* Lit une ligne de l'entrée standard */
