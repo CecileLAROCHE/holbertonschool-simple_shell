@@ -2,20 +2,18 @@
 
 ![Project Status](https://img.shields.io/badge/status-development-yellow)  ![License: Edu](https://img.shields.io/badge/license-Educational-lightgrey)  ![buil with](https://img.shields.io/badge/built_with-❤️‍🔥-df0000)
 
-<p align="center">
-  <img src="Picture/giphy.gif" alt="Ghost in the Shell (1995)" width="600">
-</p>
+<p align="center"><img src="Picture/giphy.gif" alt="Ghost in the Shell (1995)" width="600"><!-- markdownlint-disable-line MD033 --></p>
 
 ## 📖 Description
 
 Simple Shell is a C implementation of a basic command interpreter, inspired by the Unix shell.
 The project aims to teach and practice:
+
 * the inner workings of a command interpreter,
 * process creation and management (`fork`, `execve`, `wait`, etc.),
 * the use of environment variables and the `$PATH`,
 * input/output and stream management,
 * UNIX return code conventions.
-
 
 The program allows you to:
 
@@ -33,7 +31,7 @@ This project was developed as part of the Holberton School peer programming curr
 3 - [📚 Files in Repository](#-files-in-repository)\
 4 - [📄 Man Page](#-man-page)\
 5 - [🗺️ Flowchart](#%EF%B8%8F-flowchart)\
-6 - [🧪 Tests and outputs](#-tests-and-output)\
+6 - [🧪 Tests and outputs](#-tests-and-outputs)\
 7 - [📁 Project Structure](#-project-structure)\
 8 - [👥 Authors](#-authors)\
 9 - [📜 License](#-license)
@@ -56,19 +54,21 @@ This project was developed as part of the Holberton School peer programming curr
 ## 🚀 Features / Limitations
 
 ### ✅ Features
-- Displays a prompt and waits for user input.
-- Executes commands found in the current directory or in the `$PATH`.
-- Supports command arguments.
-- Handles environment variables (custom `_getenv` and `print_env`).
-- Man page available (`man ./man_1_simple_shell`).
-- Interactive **and** non-interactive modes.
+
+* Displays a prompt and waits for user input.
+* Executes commands found in the current directory or in the `$PATH`.
+* Supports command arguments.
+* Handles environment variables (custom `_getenv` and `print_env`).
+* Man page available (`man ./man_1_simple_shell`).
+* Interactive **and** non-interactive modes.
 
 ### ⚠️ Limitations
-- No support for advanced shell features (pipes `|`, redirections `>`, `<`, `>>`, `<<`, etc.).
-- No job control (`&`, background processes, `fg`, `bg`).
-- No shell scripting (`if`, `while`, `for`, etc.).
-- Error handling is basic compared to full-featured shells.
-- Limited set of built-in commands (only those implemented in this project).
+
+* No support for advanced shell features (pipes `|`, redirections `>`, `<`, `>>`, `<<`, etc.).
+* No job control (`&`, background processes, `fg`, `bg`).
+* No shell scripting (`if`, `while`, `for`, etc.).
+* Error handling is basic compared to full-featured shells.
+* Limited set of built-in commands (only those implemented in this project).
 
 ## 📚 Files in Repository
 
@@ -93,39 +93,29 @@ This project was developed as part of the Holberton School peer programming curr
 | `README.md`          | Main project documentation (this file).                           |
 | `AUTHORS`            | List of project contributors.                                     |
 
-
 ## 📋 Man page
+
 This project contains a man page in the repository files. You can directly run it in the shell doing : `man ./man_1_simple_shell`
 
 ## 🗺️ Flowchart
 
-<p align="center">
-<img src="Picture/Flowchart.png" alt="Flowchart">
-</p>
+<p align="center"><img src="Picture/Flowchart.png" alt="Flowchart"><!-- markdownlint-disable-line MD033 --></p>
 
 ## 🧪 Tests and Outputs
 
 ### 💻 Terminal (interactive mode)
-<p align="center">
-  <img src="Picture/terminal.png" alt="Terminal screenshot">
-</p>
+
+<p align="center"><img src="Picture/terminal.png" alt="Terminal screenshot"><!-- markdownlint-disable-line MD033 --></p>
 
 ### 📝 Interactive mode
-<p align="center">
-  <img src="Picture/ls_-l.png" alt="ls -l">
-</p>
-<p align="center">
-  <img src="Picture/cat_print_env.png" alt="cat print_env">
-</p>
+
+<p align="center"><img src="Picture/ls_-l.png" alt="ls -l"><!-- markdownlint-disable-line MD033 --></p>
+<p align="center"><img src="Picture/cat_print_env.png" alt="cat print_env"><!-- markdownlint-disable-line MD033 --></p>
 
 ### ⚙️ Non-interactive mode
-<p align="center">
-  <img src="Picture/uninteractive_mod_echo.png" alt="echo example">
-  </p>
-<p align="center">
-  <img src="Picture/uninteractive_mod_error.png" alt="error example">
-</p>
 
+<p align="center"><img src="Picture/uninteractive_mod_echo.png" alt="echo example"><!-- markdownlint-disable-line MD033 --></p>
+<p align="center"><img src="Picture/uninteractive_mod_error.png" alt="error example"><!-- markdownlint-disable-line MD033 --></p>
 
 ## 📁 Project Structure
 
@@ -151,7 +141,6 @@ This project contains a man page in the repository files. You can directly run i
 | **execute_command.c** | Executes built-in and external commands |
 | **_getenv.c** | Custom getenv implementation |
 | **_find_path_command.c** | Locates command in PATH directories |
-
 
 ## 👥 Authors
 

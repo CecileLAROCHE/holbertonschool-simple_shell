@@ -27,7 +27,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 	/* Boucle principale du shell */
 	while (1)
 	{
-		/* Affiche l'invite si le shell est en mode interactif */
+		/* interpretre l'éditeur de texte comme terminal de commande */
 		if (isatty(STDIN_FILENO))
 		{
 			if (use_color)
