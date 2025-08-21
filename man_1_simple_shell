@@ -13,15 +13,19 @@ Simple_Shell \- custom shell for small version
 
 .SH DESCRIPTION
 The
-.B Simple_Shell
-Programme is small command interpreter he read from standar input with
+.B Simple_Shell Programme is small command interpreter he read from standar input with
+
+.SH HOW TO USE THIS PROGRAM
+
+.B Start program
+.B interactiv: ./hsh
+
 
 .I process_command
 We can use het on interactiv mod and uninteractiv mod
 
-.SH Built-in implemented
 
-.br
+.SH BUILT-IN IMPLEMENTED
 
 .B Exit
 Use to exit Simple_Shell
