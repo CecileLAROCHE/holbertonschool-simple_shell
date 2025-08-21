@@ -9,8 +9,8 @@ Simple_Shell \- A simple custom shell implementation
 .br
 or in non-interactive mode:
 .br
-.B ./hsh
-< script.sh
+.B echo
+"cmd" | executable name
 
 .SH DESCRIPTION
 .B Simple_Shell
