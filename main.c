@@ -31,7 +31,11 @@ int main(int argc __attribute__((unused)), char *argv[])
 		if (isatty(STDIN_FILENO))
 		{
 			if (use_color)
-				printf("\033[1;34mMy simple_shell>\033[0m "); /* bleu gras */
+			{
+				printf("\033[1;34mMy_\033[0m"); /* bleu gras */
+				printf("\033[1;00msimple\033[0m");
+				printf("\033[1;31m_shell>\033[0m ");
+			}
 			else
 				printf("My simple_shell> ");
 			fflush(stdout); /* Permet d'afficher le prompt quoi qu'il arrive */
