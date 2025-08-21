@@ -27,11 +27,15 @@ int main(int argc __attribute__((unused)), char *argv[])
 	/* Boucle principale du shell */
 	while (1)
 	{
-		/* interpretre l'éditeur de texte comme terminal de commande */
+		/* Affiche l'invite si le shell est en mode interactif */
 		if (isatty(STDIN_FILENO))
 		{
 			if (use_color)
-				printf("\033[1;34mMy simple_shell>\033[0m "); /* bleu gras */
+			{
+				printf("\033[1;34mMy_\033[0m"); /*bleu gras*/
+				printf("\033[1;37msimple\033[0m"); /*blanc gras*/
+				printf("\033[1;31m_shell>\033[0m "); /*rouge gras*/
+			}
 			else
 				printf("My simple_shell> ");
 			fflush(stdout); /* Permet d'afficher le prompt quoi qu'il arrive */
@@ -43,7 +47,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 		{
 			/* Si EOF est atteint, afficher un message si en mode interactif */
 			if (isatty(STDIN_FILENO))
-				printf("\033[1;31mBye bye 😃\033[0m\n"); /* rouge + smiley */
+				printf("\033[1;35mBye bye 😃\033[0m\n"); /* violet + smiley */
 			else
 				 printf("Bye bye :)\n"); /* fallback si pas terminal */
 			break;
@@ -58,6 +62,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 
 		/* Si la commande était "exit", quitte le shell avec le bon code */
 		if (should_exit)
+		printf("\033[1;35mBye bye 😃\033[0m\n"); /* violet + smiley */
 			return (exit_status);
 	}
 
