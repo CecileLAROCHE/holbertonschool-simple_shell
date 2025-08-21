@@ -1,43 +1,76 @@
 #include "Shell.h"
+
 /**
- * execute_command - Execute a command with fork and execve
- * @cmd_path: Full path to the command
- * @args: Command arguments
- * @shell_n: Shell name
- * @exit_stat: Exit status pointer
+ * execute_command - Exécute une commande en créant un processus fils
+ * @cmd_path: Chemin complet vers la commande à exécuter
+ * @args: Tableau d'arguments pour la commande (doit être NULL-terminated)
+ * @shell_n: Nom du shell (pour afficher les messages d'erreur)
+ * @exit_stat: Pointeur vers la variable qui contiendra le statut de sortie
+ *
+ * Cette fonction crée un processus fils avec fork(), puis
+ * dans le fils, elle exécute la commande avec execve().
+ * Le processus parent attend la fin du fils et récupère son statut.
  */
 
-void execute_command(char *cmd_path, char **args, const char *shell_n,
-	int *exit_stat)
+void execute_command(char *cmd_path, char **args,
+const char *shell_n, int *exit_stat)
 {
 	pid_t pid;
 	int status;
 
+	/* Création d'un nouveau processus enfant */
 	pid = fork();
 
-	if (pid < 0) /*Le parent sait qui est l’enfant*/
+	/* Gestion de l'erreur lors du fork */
+	if (pid < 0)
 	{
 		perror("fork");
 		*exit_stat = 1;
 		return;
 	}
 
-	if (pid == 0) /* Processus enfant */
+	/* Code exécuté uniquement dans le processus enfant */
+	if (pid == 0)
 	{
+		/* Si la commande est introuvable */
+	if (cmd_path == NULL)
+	{
+		fprintf(stderr, "%s: not found\n", args[0]);
+		exit(127);
+	}
+
+		/*
+		 * Remplace le processus enfant par la commande spécifiée.
+		 * execve charge et exécute le binaire à cmd_path avec les arguments args
+		 * et l'environnement courant 'environ'.
+		 */
 		if (execve(cmd_path, args, environ) == -1)
 		{
-			perror(shell_n); /* ex: ./myshell: ls: No such file */
-			exit(127);       /* code d'erreur standard pour commande non trouvée */
+			/* Affiche un message d'erreur en cas d'échec */
+			perror(shell_n);
+
+			/*
+			 * Termine le processus enfant avec le code 127,
+			 * qui indique généralement une commande introuvable.
+			 */
+			exit(127);
 		}
 	}
-	else /* Processus parent */
+	else
 	{
-		waitpid(pid, &status, 0); /* Attend la fin du processus enfant */
+		/* Code exécuté uniquement dans le processus parent */
 
+		/*
+		 * Attend la fin du processus enfant et récupère son statut.
+		 * waitpid permet de bloquer le parent jusqu'à la fin de l'enfant.
+		 */
+		waitpid(pid, &status, 0);
+
+		/* Vérifie si l'enfant s'est terminé normalement */
 		if (WIFEXITED(status))
-			*exit_stat = WEXITSTATUS(status);
+			*exit_stat = WEXITSTATUS(status); /* Récupère son code de sortie */
 		else
-			*exit_stat = 1;
+			*exit_stat = 1; /* Si arrêt anormal, définit un code d'erreur */
 	}
 }
 
