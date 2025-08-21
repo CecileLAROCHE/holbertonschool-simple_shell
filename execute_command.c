@@ -33,11 +33,11 @@ const char *shell_n, int *exit_stat)
 	if (pid == 0)
 	{
 		/* Si la commande est introuvable */
-  		  if (cmd_path == NULL)
-  		  {
-  		      fprintf(stderr, "%s: not found\n", args[0]);
-		        exit(127);
-  		  }
+	if (cmd_path == NULL)
+	{
+		fprintf(stderr, "%s: not found\n", args[0]);
+		exit(127);
+	}
 
 		/*
 		 * Remplace le processus enfant par la commande spécifiée.
@@ -73,3 +73,4 @@ const char *shell_n, int *exit_stat)
 			*exit_stat = 1; /* Si arrêt anormal, définit un code d'erreur */
 	}
 }
+

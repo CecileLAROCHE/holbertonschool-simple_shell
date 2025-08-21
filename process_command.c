@@ -30,47 +30,43 @@ int process_command(char *line, char *argv[], int cmd_count, int *exit_status)
 		token = strtok(NULL, " \t\r\n");
 	}
 	args[index] = NULL;
-
-	/* Si aucune commande n'est entrée, on ne fait rien */
+/* Si aucune commande n'est entrée, on ne fait rien */
 	if (args[0] == NULL)
 		return (0);
-
-	/* Commande intégrée "exit" */
+/* Commande intégrée "exit" */
 	if (strcmp(args[0], "exit") == 0)
 		return (1);
-
-	/* Commande intégrée "env" pour afficher les variables d'environnement */
+/* Commande intégrée "env" pour afficher les variables d'environnement */
 	if (strcmp(args[0], "env") == 0)
 	{
 		print_env();
 		return (0);
 	}
-	/* Si la commande contient un '/' quelque part, c’est un chemin (absolu ou relatif) */
+/* Si la commande contient un '/' quelque part, c’est un chemin (absolu ou relatif) */
 	if (strchr(args[0], '/'))
 		{
 		if (access(args[0], X_OK) == 0)
 			cmd_path = strdup(args[0]);
 		else
 		{
-			fprintf(stderr,"%s: %d: %s: not found\n", argv[0], cmd_count, args[0]);
+			fprintf(stderr, "%s: %d: %s: not found\n", argv[0], cmd_count, args[0]);
 			*exit_status = 127;
 			return (127);
 		}
 	}
 	else
-	{
-		/* Recherche la commande dans le PATH */
+	{/* Recherche la commande dans le PATH */
 		cmd_path = find_in_path(args[0]);
 		if (cmd_path == NULL)
 		{
-			fprintf(stderr,"%s: %d: %s: not found\n", argv[0], cmd_count, args[0]);
+			fprintf(stderr, "%s: %d: %s: not found\n", argv[0], cmd_count, args[0]);
 			*exit_status = 127;
 			return (127);
 		}
 	}
-
-	/* Exécute la commande et libère la mémoire allouée */
+/* Exécute la commande et libère la mémoire allouée */
 	execute_command(cmd_path, args, argv[0], exit_status);
 	free(cmd_path);
 	return (0);
 }
+

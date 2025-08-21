@@ -40,6 +40,7 @@ Exit the shell.
 .B env
 Print the current environment.
 
+
 .SH RETURN VALUE
 The shell returns the exit status of the last executed command.
 In case of failure, an appropriate error code is returned.
